@@ -44,7 +44,7 @@ i {
     height: 600px;
     padding-top: 300px auto;
     margin: auto;
-    background-color: rgba(52, 1, 170, 0.13);
+    background-image: linear-gradient(to right, rgba(1, 170, 131, 0.13) , rgba(52, 1, 170, 0.13));
     border-radius: 25px;
     color: white;
 }
