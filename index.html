@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List</title>   
+    <title>Todo List</title>   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="css/style.css" rel="stylesheet">
      
@@ -13,21 +16,39 @@
 
     <div id="app">
 
-        <header>
+        
+            
+        
 
-        </header>
+        <main>  
+            <div class="bg">
+              <div class="container">   
+                <div class="todo-list">
+                
+                    <h1 class="title">Todo List</h1>
 
-        <main>
-            <div class="container">
-                <div id="task-list">
-                    <ul>
-                        <li v-for="task in tasklist">
-                            {{task.text}}
-                        </li>
-                    </ul>
+                    <div class="add-task">
+                        <input type="text" placeholder="Aggiungi task" v-model="newTask"/>
+                        <div class="add-btn" @click="aggiungiTask"><i class="fa-solid fa-plus"></i></div>
+                    </div>
+                    
+
+                    <div id="task-list">
+                        <ul>
+                            <li v-for="(task, index) in tasklist" :key="index" :class="{ 'done': task.done }"> 
+                                <span class="task-text">{{task.text}} </span>
+                                <div class="icons">
+                                    <i class="fa-solid fa-square-check check" @click="toggleDone(index)"></i>
+                                    <i class="fa-solid fa-trash trash" @click="eliminaTask(index)"></i>
+                                </div>
+                            </li>   
+                        </ul>
+                    </div>
+
                 </div>
-
-            </div>
+            </div>  
+        </div>
+            
         </main>
 
     </div>

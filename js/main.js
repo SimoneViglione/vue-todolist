@@ -5,18 +5,35 @@ const { createApp } = Vue
       return {
         tasklist: [
           {
-            text: 'pulire cucina',
-            done: 'false'
+            text: 'Fare spesa',
+            done: false
           },
           {
-            text: 'fare spesa',
-            done: 'false'
+            text: 'Finire vue-todolist',
+            done: true
           },
           {
-            text: 'finire vue-todolist',
-            done: 'false'
+            text: 'Pulire cucina',
+            done: false
           },
         ],
+      }
+    },
+    methods: {
+      toggleDone(index) {
+        this.tasklist[index].done = !this.tasklist[index].done
+      },
+      eliminaTask(index) {
+        this.tasklist.splice(index, 1)
+      },
+      aggiungiTask() {
+        if (this.newTask.trim() !== '') { 
+          this.tasklist.push({
+            text: this.newTask,
+            done: false
+          })
+          this.newTask = '' 
+        }
       }
     }
   }).mount('#app')

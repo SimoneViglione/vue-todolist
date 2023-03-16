@@ -4,22 +4,81 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+/********************************************/
+
+ul {
+    list-style: none;
+}
+
+li {
+    width: 350px;
+    padding: 1rem;
+    margin: 1rem auto;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+i {
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+/********************************************/
+
+.bg {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://images4.alphacoders.com/104/104916.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 3rem;
+}
+
+.container {
+    max-width: 1080px;
+    height: 600px;
+    padding-top: 300px auto;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.13);
+    border-radius: 25px;
+    color: white;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.todo-list {
+    padding: 1rem 1rem;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.add-task {
+    justify-content: center;
+    display: flex;
+    padding: 1rem 0;
+}
+
+.add-btn {
+    border: solid 1px;
+    margin-left: 5px;
+    color: rgb(255, 57, 137);
+    background-color: rgb(255, 255, 255);
 }
 
 /********************************************/
 
 
-
 /********************************************/
-
-
-
-/********************************************/
-
-
-
-/********************************************/
-
 
 
 /********************************************/
