@@ -44,7 +44,7 @@ i {
     height: 600px;
     padding-top: 300px auto;
     margin: auto;
-    background-color: rgba(255, 255, 255, 0.13);
+    background-color: rgba(52, 1, 170, 0.13);
     border-radius: 25px;
     color: white;
 }
@@ -71,8 +71,16 @@ i {
 .add-btn {
     border: solid 1px;
     margin-left: 5px;
-    color: rgb(255, 57, 137);
+    color: rgb(79, 144, 157);
     background-color: rgb(255, 255, 255);
+}
+
+.check {
+    color: rgb(97, 228, 215);
+} 
+
+.trash {
+    color: rgb(94, 0, 182);
 }
 
 /********************************************/
