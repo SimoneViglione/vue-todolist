@@ -36,7 +36,7 @@
                     <div id="task-list">
                         <ul>
                             <li v-for="(task, index) in tasklist" :key="index" :class="{ 'done': task.done }"> 
-                                <span class="task-text">{{task.text}} </span>
+                                <span class="task-text" @click="toggleDone(index)">{{task.text}} </span>
                                 <div class="icons">
                                     <i class="fa-solid fa-square-check check" @click="toggleDone(index)"></i>
                                     <i class="fa-solid fa-trash trash" @click="eliminaTask(index)"></i>
